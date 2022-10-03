@@ -711,9 +711,7 @@ iframe {
 .no-lines:before,.no-lines:after{
 	display:none !important
 }
-.logo{
-	max-width: 2cm;
-}
+
 .top-head .logo {
 	position:relative;
 	display:table-cell;
@@ -796,10 +794,10 @@ iframe {
 	border-top-right-radius: 7em;
 }
 .top-head.boxed-transparent.dark > .container {
-	border: 1px rgba(255, 0, 0, 0.4) solid;
+	border: 1px rgba(56, 56, 56, 0.126) solid;
 }
 .top-head.boxed-transparent .logo {
-	padding-left: 30px;
+	padding-left: 20px;
 }
 .top-head.boxed-transparent > .container .head-srch-cart{
 	margin-right:-30px

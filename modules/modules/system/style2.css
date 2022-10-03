@@ -473,7 +473,7 @@ form .field-multiple-table td.field-multiple-drag {
 	box-shadow: 0 3px 0 0 #a34c00
 }
 
-.tp-simpleresponsive .button:hover.darkgrey,
+.tp- .button:hover.darkgrey,
 .tp-simpleresponsive .button:hover.grey {
 	background-color: #555;
 	-webkit-box-shadow: 0 3px 0 0 #222;
