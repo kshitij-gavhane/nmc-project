@@ -8,11 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
-    <script src="https://kit.fontawesome.com/ea2a722309.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -48,7 +45,7 @@
             <li class="relative px-6 py-3">
               
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="index.html"
               >
                 <svg
@@ -69,13 +66,9 @@
               </a>
             </li>
           </ul>
-          <ul >
+          <ul>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
-              <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" href="./invoice.html">
+              <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="./invoice.html">
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -94,9 +87,13 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+                <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="payment.html"
+                href="#"
               >
                 <svg
                   class="w-5 h-5"
@@ -159,7 +156,7 @@
                 aria-hidden="true"
               ></span> -->
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="index.html"
               >
                 <svg
@@ -210,8 +207,8 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="payment.html"
-              >
+                href="#"
+              ></a>
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"
@@ -320,76 +317,7 @@
                 </button>
               </li>
               <!-- Notifications menu -->
-              <li class="relative">
-                <button
-                  class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
-                  @click="toggleNotificationsMenu"
-                  @keydown.escape="closeNotificationsMenu"
-                  aria-label="Notifications"
-                  aria-haspopup="true"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
-                    ></path>
-                  </svg>
-                  <!-- Notification badge -->
-                  <span
-                    aria-hidden="true"
-                    class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
-                  ></span>
-                </button>
-                <template x-if="isNotificationsMenuOpen">
-                  <ul
-                    x-transition:leave="transition ease-in duration-150"
-                    x-transition:leave-start="opacity-100"
-                    x-transition:leave-end="opacity-0"
-                    @click.away="closeNotificationsMenu"
-                    @keydown.escape="closeNotificationsMenu"
-                    class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
-                  >
-                    <li class="flex">
-                      <a
-                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
-                      >
-                        <span>Messages</span>
-                        <span
-                          class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600"
-                        >
-                          13
-                        </span>
-                      </a>
-                    </li>
-                    <li class="flex">
-                      <a
-                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
-                      >
-                        <span>Sales</span>
-                        <span
-                          class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600"
-                        >
-                          2
-                        </span>
-                      </a>
-                    </li>
-                    <li class="flex">
-                      <a
-                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
-                      >
-                        <span>Alerts</span>
-                      </a>
-                    </li>
-                  </ul>
-                </template>
-              </li>
+              
               <!-- Profile menu -->
               <li class="relative">
                 <button
@@ -490,128 +418,96 @@
           </div>
         </header>
         <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"> View Transaction</h2>
-           
-                <!-- Default box -->
-                <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">Nagpur Munciple Corporation</h3>
-                    <div class="card-tools">
-                      <button type="button" class="btn btn-primary btn-sm">
-                        <i class="fas fa-lock-open"></i> Open System</button>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                        <div class="row">
-                          <div class="col-12">
-                               <div class="post">
-                               <!--Recent Content Creations-->
-                                 <div class="card">
-                      <div class="card-header">
-                        <h4 class="card-title">Invoices</h4>
-                      </div>
-                      <!-- /.card-header -->
-                      <div class="card-body">
-                        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                          <thead>
-                          <tr role="row">
-                            <th>Invoice No#</th>
-                            <th>Description</th>
-                            <th>Invoice Amount</th>
-                            <th>Status</th>
-                            <th>Preview</th>
-                            <th>Action</th>                    
-                            </tr>
-                          </thead>
-                          <tbody>                
-                          
-                          <tr role="row" class="odd">
-                            <td class="sorting_1">B1432</td>
-                            <td>QUARTERLY RENT<br>(August + September + November)</td>
-                            <td>₹ 45275.00</td>
-                            <td><span class="badge bg-danger">Outstanding</span>
-                            <td><button type="button" class="btn btn-primary btn-sm" onClick="location.href='./invoice/index.html'">
-                        <i class="fas fa-eye"></i> Preview Invoice</button></td>
-                            
-                            <td class="project-actions text-left">
-                              <button type="button" class="btn btn-primary btn-sm">
-                        <i class="fas fa-eye"></i> View</button>
-                                    
-                              <button type="button" class="btn btn-info btn-sm">
-                        <i class="fas fa-pencil-alt"></i> Edit</button>
-                              
-                              <button type="button" class="btn btn-danger btn-sm">
-                        <i class="fas fa-trash"></i> Delete</button>
-                                </td>
-                          </tr>
-                            
-                            <tr role="row" class="even">
-                            <td class="sorting_1">B1437</td>
-                              <td>MONTHLY Rent<br>(July)</td>
-                            <td>₹ 15575.00</td>
-                            <td><span class="badge bg-success">Paid</span>
-                            <td><button type="button" class="btn btn-primary btn-sm" >
-                        <i class="fas fa-eye"></i> Preview Invoice</button></td>
-                            
-                            <td class="project-actions text-left">
-                              <button type="button" class="btn btn-primary btn-sm" onClick="location.href='./invoice/recipt.html'">
-                        <i class="fas fa-eye"></i> View</button>
-                                    
-                              <button type="button" class="btn btn-info btn-sm">
-                        <i class="fas fa-pencil-alt"></i> Edit</button>
-                              
-                              <button type="button" class="btn btn-danger btn-sm">
-                        <i class="fas fa-trash"></i> Delete</button>
-                                </td>
-                          </tr>
-                            
-                             <tr role="row" class="odd">
-                            <td class="sorting_1">B1432</td>
-                            <td>MONTHLY Rent<br>(June)</td>
-                            <td>₹ 17575.00</td>
-                            <td><span class="badge bg-success">Paid</span>
-                            <td><button type="button" class="btn btn-primary btn-sm" > 
-                        <i class="fas fa-eye"></i> Preview Invoice</button></td>
-                            
-                            <td class="project-actions text-left">
-                              <button type="button" class="btn btn-primary btn-sm" onClick="location.href='./invoice/recipt.html'" >
-                        <i class="fas fa-eye"></i> View</button>
-                                    
-                              <button type="button" class="btn btn-info btn-sm">
-                        <i class="fas fa-pencil-alt"></i> Edit</button>
-                              
-                              <button type="button" class="btn btn-danger btn-sm">
-                        <i class="fas fa-trash"></i> Delete</button>
-                                </td>
-                          </tr>
-                            
-                          </tbody>
-          
-                        </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite"></div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                </div>
-                <!-- /.card -->
-          
-              </section>
-              <!-- /.content -->
-            </div>
-              </div>
-            </div>
+            <div class="container px-6 mx-auto grid">
+                <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"> Bill Review</h2>
 
-           
+                <div class="heading">
+                    <!-- <h3>Order Review</h3> -->
+                
+                <div class="grid-container">
+                  <div class="label-cell label-cell-left Label-1"><label class="base-label">Name</label></div>
+                  <div class="label-cell  Text-1"><p class="order-details">Elon Musk</p></div>
+                  <div class="label-cell label-cell-left Label-2"><label class="base-label">Email Address</label></div>
+                    <div class="label-cell Text-2"><p class="order-details">nasales@teslamotors.com</p></div>
+                    <div class="label-cell label-cell-left Label-3"><label class="base-label">Shop id</label></div>
+                    <div class="label-cell Text-3"><p class="order-details">X Æ A-12</p></div>
+                    <div class="label-cell label-cell-left Label-4"><label class="base-label">Rent From</label></div>
+                    <div class="label-cell Text-4"><p class="order-details">August 1, 2023</p></div>
+                    <div class="label-cell label-cell-left Label-5 bottom-border"><label class="base-label">Rent Upto</label></div>
+                    <div class="label-cell Text-5 bottom-border"><p class="order-details">Nov 30, 2023</p></div>
+                </div>
+                    
+                    
+                
+                    
+                    <!-- div>
+                        <div class="inline"><label class="base-label">Name</label>
+                            <p class="order-details">Josie Wellington</p></div>
+                        <div class="inline"><label class="base-label">Email Address</label>
+                        <p class="order-details">josie.wellington346@gmail.com</p></div>
+                    </div>
+                        <div>
+                        <div class="inline"><label class="base-label">Program End</label>
+                            <p class="order-details">December 31, 2020</p></div>
+                    </div -->
+                    
+                    <label class="base-label margin-40">Order Details</label>
+                    <ul class=leaders>
+                    <li class="margin-20"><span>3 month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;base rent</span>
+                    <span>₹ 15000.00</span></li>
+                    <li class="margin-20"><span>1 month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extra Taxes</span>
+                    <span>₹ 575.00</span></li>
+                    <li class="margin-40"><strong><span>Total</span>
+                    <span>₹ 15575.00</span></strong></li>
+                </ul>
+                    <h3 class="margin-40">Payment</h3>
+                    <form action="/action_page.php">
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> <strong>By checking this box, you agree that your debit/credit card will be charged ₹ 15575.00.</strong><br><br>
+                You also agree that, unless you are removed from the agreement before the lease end date, your subscription will automatically renew and you authorize us to continue to charge your debit/credit card monthly (until removed from the program). Once charged, all purchases, including renewals, are non-refundable.</label>
+                            
+                        </form>
+                </div>
+                <div class="margin-40">
+                    
+                <div class="card">
+                    <div class="three-column">
+                        <div>
+                    <label class="base-label">Card on File</label>
+                    XXXX-XXXX-XXXX-1234
+                        </div>
+                        <div>
+                    <label class="base-label">Expiration</label>
+                    01/23
+                        </div>
+                        <div class="mc"><label class="base-label">Card Type</label>
+                            <img src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_circles_92px_2x.png"></div>
+                    </div>
+                    <input type="button" value="Pay with this card" class="button"></input>
+                </div>	
+                    
+                    
+                <div class="card" style="margin-top:40px">
+                    <label class="base-label">Name</label>
+                    <input class="base-input" id="_905815077" type="text" name="client_id" placeholder="" value="">
+                    <label class="base-label">Card Number</label>
+                    <input class="base-input input-cc-icon" id="_905815077" type="text" name="client_id" placeholder="" value="">
+                    <label class="base-label">Expiration</label>
+                    <input class="base-input" id="_905815077" type="text" name="client_id" placeholder="" value="">
+                    <label class="base-label">CVC</label>
+                    <input class="base-input" id="_905815077" type="text" name="client_id" placeholder="" value="">
+                    <input type="button" value="Pay Now" class="button"></input>
+                </div>
+                </div>
+              </div>
+  
+             
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
+  
