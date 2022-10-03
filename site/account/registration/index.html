@@ -373,7 +373,7 @@
 			<div class="col-md-8">
 				<div class="mdl-shadow--2dp  text-center">
 					<div class="text-center p-4" style="background-color: #370a9a;">
-						<span class="h2 text-center text-white">Organization/Member
+						<span class="h2 text-center text-white">Shop Tenant
 							Registration</span>
 					</div>
 
@@ -392,7 +392,7 @@
 						</div>	
 							<p class="text-danger">All Fields are mandatory!</p>
 
-							<div class="form-group d-flex flex-row p-2">
+							<!-- <div class="form-group d-flex flex-row p-2">
 								<label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault1"> Registering For? </label>
 								<div class="form-check m-1">
 									<input class="form-check-input" type="radio" name="registeredFor" id="registeredFor" value="1"> <label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault1"> Organization </label>
@@ -400,60 +400,10 @@
 								<div class="form-check m-1">
 									<input class="form-check-input" type="radio" name="registeredFor" id="registeredFor1" value="0"> <label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault2"> Individual </label>
 								</div>
-							</div>
+							</div> -->
 							<p class="text-danger mt-1 ml-1" id="Registering_For"></p>
 							
-							<!-- Dept details div -->
-							<div id="dept_details">
-								
-
-								<div class="form-group" id="deptname">
-									<div class="m-3"><span class="col-sm-4 text-right font-weight-bold text-primary m-3">Organization/Company Details :</span></div>
-								<div class="input-group">
-									<span class="col-sm-4 font-weight-bold text-right">Organization/Company
-										Name :</span> <input id="dept_name" type="text" class="form-control" name="dept_name" autofocus="autofocus" placeholder="Department / Member Name" autocomplete="off" maxlength="50" required="required">
-								</div>
-								<p class="text-danger mt-1 ml-1" id="dept_dev_name"></p>
-							</div>
-							
-							
-							
-							</div>
-							
-							<!--End Dept details div -->
-							
-							<!--Dept head div -->
-							<div id="dept_head_details">
-								
-
-								<div class="form-group" id="">
-									<div class="m-3"><span class="col-sm-4 text-right font-weight-bold text-primary m-3">Verification Details :</span></div>
-								<div class="input-group">
-									
-									<span class="col-sm-4 font-weight-bold text-right">Aadhar Number
-										</span> <input id="dept_head_name" type="text" class="form-control" name="dept_head_name" autofocus="autofocus" placeholder="Organization Head Name" autocomplete="off" maxlength="50" required="required">
-								</div>
-								<p class="text-danger mt-1 ml-1" id="dept_head_name_err"></p>
-								</div>
-							
-							<div class="form-group" id="deptmail">
-								<div class="input-group">
-									<span class="col-sm-4 font-weight-bold text-right">Email Address:</span> <input id="dept_head_mail" type="text" class="form-control" name="dept_head_mail" onchange="checkmail(this.value)" autofocus="autofocus" placeholder="Organization / Member Email" autocomplete="off" maxlength="100" required="required">
-								</div>
-								<p class="text-danger mt-1 ml-1" id="dept_head_mail_err"></p>
-							</div>
-							
-							<div class="form-group">
-								
-								<div class="input-group">
-									<span class="col-sm-4 font-weight-bold text-right">Mobile Number :</span> <input id="dept_head_number" type="text" class="form-control" name="dept_head_number" autocomplete="off" onchange="checkmobile(this.value)" placeholder="Organization Head Number" min="10" maxlength="10" required="required">
-								</div>
-								<p class="text-danger mt-1 ml-1" id="dept_head_number_err"></p>
-							</div>
-							
-							</div>
-							<!--End Dept head div -->
-							
+					
 							<!--contact person details -->
 							<div id="contact_person_details">
 							<div class="form-group">
@@ -544,9 +494,9 @@
 							
 							<div class="form-group d-flex flex-row p-2">
 								<label id="changelevel" class="col-sm-4 font-weight-bold text-right" for="nationality">
-									Is Your Company/Department Registered In India? </label>
+									Are You Resident Of Maharashtra? </label>
 								<div class="form-check m-1">
-									<input class="form-check-input" type="radio" name="nationality" id="nationality" value="indian"> <label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault1"> Yes </label>
+									<input class="form-check-input" type="radio" name="nationality" id="nationality" value="Maharashtrian"> <label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault1"> Yes </label>
 								</div>
 								<div class="form-check m-1">
 									<input class="form-check-input" type="radio" name="nationality" id="nationality1" value="no"> <label class="col-sm-4 font-weight-bold text-right" for="flexRadioDefault2"> No </label>
@@ -595,16 +545,7 @@
 							
 							<div class="form-group" id="deptauth">
 							
-							<div class="form-group d-flex flex-row col-sm-12 p-2">
-									<label for="flexRadioDefault1" class="col-sm-8 font-weight-bold text-right"><b>Please
-											go through Authorization letter And all terms and conditions</b>
-										<span class="text-danger"> *</span> -</label> 
-										<!-- <a href="#" class="text-primary m-1" style="text-decoration: none"
-										data-toggle="modal" data-target="#exampleModalCenter"> <span>Authorization
-											Letter</span></a> -->
-											<a href="#" onclick="loadInput()">Auth letter</a>
-											
-								</div>
+					
 							
 
 								<!--<div class="input-group">
@@ -625,70 +566,7 @@
 							</div>
 							
 							
-								<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLongTitle">Authorization
-													letter</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-													<span aria-hidden="true"></span>
-												</button>
-									</div>
-
-											<div class="modal-body">
-												<!-- <embed  th:src="@{'/authorization' }" type="text/html" style="height: 400px; width: 80%;overflow: auto;"> -->
-												<div id="page_1">
-
-
-													<p class="p0 ft0">Department/Organization's Member
-														should print this on company's letterhead</p>
-													<p class="p1 ft0">No letterhead is mandatory for
-														Individual Member</p>
-													<p class="p2 ft1">To Whomsoever Concern</p>
-													<table cellpadding="0" cellspacing="0" class="t0">
-														<tr>
-															<td class="tr0 td0"><p class="p3 ft2">Subject:
-																	Declaration of the Authorized Person:</p></td>
-															<td class="tr0 td1"><p class="p4 ft3"></p></td>
-															<td class="tr0 td2"><p class="p4 ft3"></p></td>
-														</tr>
-														<tr>
-															<td class="tr1 td0"><p class="p4 ft5">
-																	<span class="ft4">We &#8220;</span> <span id="dept"> Department
-																	Name/Organization name </span><span class="ft4"> &#8221; would
-																		like to authorize  to sign on
-														behalf of our department for register </span>
-																</p></td>
-															
-															
-														</tr>
-													</table>
-													<p class="p6 ft4">accounts on Mobile
-														Seva AppStore for hosting Mobile Application.</p>
-													<p class="p7 ft2">Contact Person Details:</p>
-													<p class="p8 ft2">
-														<span class="ft6">1 Name : </span><span id="second_name"></span>
-													</p>
-													<p class="p9 ft2">
-														<span class="ft6">2 Mobile No : </span> <span id="second_number"></span>
-													</p>
-													<p class="p10 ft2">
-														<span class="ft6">3 Email-id : </span>
-														<nobr>
-															<span class="ft7" id="second_mail"></span>
-														</nobr>
-													</p>
-													
-													<p class="p11 ft2">Yours Sincerely,</p>
-													<p class="p12 ft2">Full Name : <span id="3rd_name"></span></p>
-													<p class="p13 ft2">Date : <span id="date"></span></p>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								
 							
 							<div class="text-center">
 								<span class="text-center">By clicking Register you are
@@ -738,10 +616,7 @@
 				          <span aria-hidden="true">&times;</span>
 				        </button>-->
 								</div>
-								<div class="modal-body">Individual Member are required
-									to upload apps within 2 months from the date of their profile
-									approval on Mobile Seva Appstore to avoid suspension. To
-									proceed further please confirm if you are a Member.</div>
+								
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
 									<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="uncheck1()">Close</button>
@@ -761,6 +636,7 @@
 <script src="js/2771-main_js-jquery-3.5.1.slim.min.js"></script>
 <script src="js/3020-main_js-jquery.min.js"></script>
 <script src="js/72-main_js-popper.min.js"></script>
+<script src="js/captcha.js"></script>
 <script src="js/4494-main_js-bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/main_bootstrap-bootstrap.min.css">
 <link rel="stylesheet" href="css/main_bootstrap-font-awesome.css">
