@@ -711,6 +711,9 @@ iframe {
 .no-lines:before,.no-lines:after{
 	display:none !important
 }
+.logo{
+	max-width: 2cm;
+}
 .top-head .logo {
 	position:relative;
 	display:table-cell;
@@ -767,7 +770,7 @@ iframe {
 	border-bottom:1px rgba(0,0,0, 0.2) solid;
 }
 .top-head.fluid.transparent .logo {
-	border-right:1px rgba(0,0,0 ,0.2) solid;
+	border-right:1px rgba(156, 156, 156, 0.2) solid;
 }
 .top-head.fluid .transparent.dark .logo {
 	border-right:1px rgba(255,255,255,0.2 ) solid;
@@ -793,7 +796,7 @@ iframe {
 	border-top-right-radius: 7em;
 }
 .top-head.boxed-transparent.dark > .container {
-	border: 1px rgba(255,255,255,0.4) solid;
+	border: 1px rgba(255, 0, 0, 0.4) solid;
 }
 .top-head.boxed-transparent .logo {
 	padding-left: 30px;
@@ -11638,7 +11641,7 @@ html.square .pricing-tbl.style-4 .plan-head:before{
 /** Style alter **/
 .profile .user-picture{float: inherit}
 .logo.abs_logo{
-	width: 700px;
+	width: 500px;
 	margin: 0 auto;
 	padding-right: 10px;
 	position: absolute;
