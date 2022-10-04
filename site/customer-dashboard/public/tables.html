@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>customer-dashboard</title>
+    <title>Invoice - customer-dashboard</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -14,16 +14,6 @@
       defer
     ></script>
     <script src="./assets/js/init-alpine.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
   </head>
   <body>
     <div
@@ -42,12 +32,8 @@
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="index.html"
               >
                 <svg
@@ -90,10 +76,14 @@
                 </svg>
                 <span class="ml-4">Shop</span>
               </a>
-            </li>
+            </li> 
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="tables.html"
               >
                 <svg
@@ -110,7 +100,7 @@
                 </svg>
                 <span class="ml-4">Invoices</span>
               </a>
-            </li>
+            </li>          
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -134,8 +124,7 @@
               </a>
             </li>
             
-<!-- blank -->
-            
+            <!-- blank -->
           </ul>
         </div>
       </aside>
@@ -172,13 +161,9 @@
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
-              class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-              href="index.html"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="index.html"
               >
                 <svg
                   class="w-5 h-5"
@@ -199,6 +184,7 @@
             </li>
           </ul>
           <ul>
+            <!-- form removed by AI -->
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -244,8 +230,12 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="tables.html"
               >
                 <svg
@@ -262,7 +252,7 @@
                 </svg>
                 <span class="ml-4">Invoices</span>
               </a>
-            </li><!-- blank -->
+            </li>
           </ul>
         </div>
       </aside>
@@ -321,7 +311,77 @@
               <!-- Theme toggler -->
               <!-- Theme toggler -->
               <!-- Notifications menu -->
-          
+              <li class="relative">
+                <button
+                  class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
+                  @click="toggleNotificationsMenu"
+                  @keydown.escape="closeNotificationsMenu"
+                  aria-label="Notifications"
+                  aria-haspopup="true"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+                    ></path>
+                  </svg>
+                  <!-- Notification badge -->
+                  <span
+                    aria-hidden="true"
+                    class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
+                  ></span>
+                </button>
+                <template x-if="isNotificationsMenuOpen">
+                  <ul
+                    x-transition:leave="transition ease-in duration-150"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    @click.away="closeNotificationsMenu"
+                    @keydown.escape="closeNotificationsMenu"
+                    class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
+                    aria-label="submenu"
+                  >
+                    <li class="flex">
+                      <a
+                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                        href="#"
+                      >
+                        <span>Messages</span>
+                        <span
+                          class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600"
+                        >
+                          13
+                        </span>
+                      </a>
+                    </li>
+                    <li class="flex">
+                      <a
+                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                        href="#"
+                      >
+                        <span>Sales</span>
+                        <span
+                          class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600"
+                        >
+                          2
+                        </span>
+                      </a>
+                    </li>
+                    <li class="flex">
+                      <a
+                        class="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                        href="#"
+                      >
+                        <span>Alerts</span>
+                      </a>
+                    </li>
+                  </ul>
+                </template>
+              </li>
               <!-- Profile menu -->
               <li class="relative">
                 <button
@@ -421,198 +481,19 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
+        <main class="h-full pb-16 overflow-y-auto">
+          <div class="container grid px-6 mx-auto">
             <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-            Statistics
+              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+              Invoice Details
             </h2>
-            
-            <!-- Shop -->
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    Total clients
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    6389
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    Account balance
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    $ 46,760.89
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    New sales
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    376
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div
-                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <div
-                  class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500"
-                >
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p
-                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                  >
-                    Pending contacts
-                  </p>
-                  <p
-                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                  >
-                    35
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            
-            <!-- Charts -->
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+<!-- -->
+            <!-- With actions -->
+            <h4
+              class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
             >
-              Charts
-            </h2>
-            <div class="grid gap-6 mb-8 md:grid-cols-2">
-              <div
-                class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Revenue
-                </h4>
-                <canvas id="pie"></canvas>
-                <div
-                  class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
-                  <!-- Chart legend -->
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-blue-500 rounded-full"
-                    ></span>
-                    <span>Shirts</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
-                    ></span>
-                    <span>Shoes</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
-                    ></span>
-                    <span>Bags</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Traffic
-                </h4>
-                <canvas id="line"></canvas>
-                <div
-                  class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
-                  <!-- Chart legend -->
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
-                    ></span>
-                    <span>Organic</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
-                    ></span>
-                    <span>Paid</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- New Table -->
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Recent Invoice
-            </h2>
+              All Invoices
+            </h4>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
                 <table class="w-full whitespace-no-wrap">
@@ -624,6 +505,7 @@
                       <th class="px-4 py-3">Amount</th>
                       <th class="px-4 py-3">Status</th>
                       <th class="px-4 py-3">Date</th>
+                      <th class="px-4 py-3">Actions</th>
                     </tr>
                   </thead>
                   <tbody
@@ -632,21 +514,6 @@
                     <tr class="text-gray-700 dark:text-gray-400">
                       <td class="px-4 py-3">
                         <div class="flex items-center text-sm">
-                          <!-- Avatar with inset shadow -->
-                          <div
-                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
-                          >
-                            <img
-                              class="object-cover w-full h-full rounded-full"
-                              src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-                              alt=""
-                              loading="lazy"
-                            />
-                            <div
-                              class="absolute inset-0 rounded-full shadow-inner"
-                              aria-hidden="true"
-                            ></div>
-                          </div>
                           <div>
                             <p class="font-semibold">Hans Burger</p>
                             <p class="text-xs text-gray-600 dark:text-gray-400">
@@ -656,17 +523,88 @@
                         </div>
                       </td>
                       <td class="px-4 py-3 text-sm">
-                        $ 863.45
+                        &#8377; 46200.00
                       </td>
                       <td class="px-4 py-3 text-xs">
                         <span
                           class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
                         >
-                          Approved
+                          Unpaid
                         </span>
                       </td>
                       <td class="px-4 py-3 text-sm">
                         6/10/2020
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center space-x-4 text-sm">
+                          <button
+                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                            aria-label="Edit" 
+                            onclick="window.location.href='modals.html';"
+                          >
+                          <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.928 12.989c0.006-0.656 0-1.306 0-1.961v-1.961c0-0.072 0.022-0.111 0.078-0.15 0.639-0.444 1.339-0.672 2.122-0.617 0.694 0.050 1.261 0.389 1.561 1.206 0.183 0.494 0.228 1.011 0.228 1.539 0 0.483-0.039 0.961-0.189 1.422-0.317 0.989-1.039 1.372-1.983 1.328-0.65-0.028-1.217-0.278-1.744-0.65-0.050-0.044-0.078-0.089-0.072-0.156zM15.533 13.8c0.255 0.1 0.516 0.111 0.783 0.083 0.645-0.067 1.217-0.317 1.739-0.694 0.050-0.033 0.072-0.072 0.072-0.139-0.006-0.217 0-0.439 0-0.655 0-0.222-0.006-0.444 0-0.667 0-0.078-0.022-0.111-0.1-0.122-0.389-0.050-0.772-0.122-1.161-0.161-0.389-0.033-0.778-0.017-1.156 0.105-0.372 0.122-0.65 0.345-0.761 0.728-0.089 0.3-0.089 0.6 0.005 0.9 0.089 0.306 0.289 0.511 0.578 0.622zM32 6.222v19.556c0 1.472-1.194 2.667-2.667 2.667h-26.667c-1.472 0-2.667-1.194-2.667-2.667v-19.556c0-1.472 1.194-2.667 2.667-2.667h26.667c1.472 0 2.667 1.194 2.667 2.667zM20.472 7.55c0.022 0.095 0.050 0.189 0.089 0.283 0.917 2.256 1.828 4.517 2.75 6.772 0.078 0.194 0.094 0.356 0.011 0.55-0.156 0.344-0.272 0.7-0.433 1.039-0.145 0.306-0.372 0.528-0.706 0.622-0.233 0.061-0.472 0.072-0.717 0.050-0.117-0.011-0.233-0.039-0.35-0.044-0.156-0.011-0.233 0.061-0.239 0.222-0.006 0.156-0.006 0.311 0 0.461 0.005 0.255 0.089 0.372 0.344 0.417 0.261 0.044 0.522 0.089 0.789 0.094 0.794 0.017 1.428-0.3 1.839-0.995 0.161-0.272 0.311-0.561 0.428-0.855 1.1-2.783 2.194-5.572 3.289-8.361 0.033-0.083 0.061-0.167 0.072-0.256 0.022-0.133-0.039-0.2-0.172-0.205-0.311-0.005-0.617 0-0.928 0-0.172 0-0.294 0.078-0.355 0.239-0.022 0.061-0.050 0.128-0.072 0.189l-1.617 4.65c-0.117 0.339-0.233 0.672-0.361 1.033-0.022-0.050-0.033-0.078-0.044-0.105-0.6-1.661-1.2-3.328-1.8-4.989-0.094-0.261-0.194-0.528-0.294-0.789-0.050-0.139-0.15-0.222-0.3-0.222-0.355-0.006-0.711-0.011-1.067-0.006-0.122 0-0.183 0.089-0.156 0.205zM13.467 13.222c0.095 0.65 0.422 1.156 1 1.478 0.55 0.306 1.15 0.344 1.761 0.255 0.706-0.105 1.328-0.406 1.878-0.861 0.022-0.017 0.044-0.033 0.078-0.056 0.028 0.178 0.050 0.344 0.083 0.511 0.028 0.145 0.117 0.239 0.25 0.245 0.255 0.005 0.505 0.005 0.761 0 0.128-0.006 0.211-0.089 0.222-0.217 0.006-0.044 0.006-0.089 0.006-0.128v-4.933c0-0.2-0.011-0.4-0.039-0.6-0.089-0.6-0.344-1.094-0.883-1.411-0.311-0.183-0.656-0.278-1.011-0.328-0.167-0.022-0.333-0.039-0.506-0.061h-0.556c-0.044 0.005-0.089 0.016-0.139 0.016-0.456 0.022-0.906 0.078-1.344 0.194-0.283 0.072-0.556 0.178-0.833 0.272-0.167 0.056-0.25 0.178-0.244 0.361 0.005 0.156-0.006 0.311 0 0.461 0.005 0.228 0.1 0.289 0.317 0.228 0.361-0.094 0.728-0.194 1.094-0.267 0.572-0.105 1.15-0.15 1.728-0.067 0.3 0.044 0.583 0.133 0.783 0.389 0.172 0.222 0.233 0.489 0.245 0.761 0.017 0.383 0.011 0.772 0.017 1.156 0 0.022-0.005 0.039-0.011 0.067-0.022 0-0.044 0-0.061-0.005-0.489-0.117-0.983-0.2-1.489-0.228-0.528-0.028-1.050 0.006-1.55 0.178-0.6 0.211-1.083 0.572-1.367 1.156-0.228 0.461-0.256 0.944-0.189 1.433zM5.483 7.717v9.739c0 0.044 0 0.094 0.006 0.139 0.011 0.139 0.094 0.228 0.228 0.233 0.328 0.006 0.656 0.006 0.984 0 0.139 0 0.222-0.094 0.228-0.228 0.006-0.044 0.006-0.094 0.006-0.139v-3.372c0.050 0.039 0.078 0.067 0.105 0.089 0.833 0.694 1.789 0.922 2.839 0.717 0.95-0.189 1.605-0.772 2.039-1.622 0.322-0.644 0.461-1.339 0.483-2.056 0.028-0.794-0.056-1.578-0.378-2.317-0.394-0.911-1.050-1.517-2.039-1.717-0.15-0.033-0.306-0.045-0.456-0.067h-0.389c-0.067 0.011-0.133 0.016-0.2 0.028-0.65 0.078-1.239 0.322-1.766 0.705-0.111 0.078-0.217 0.167-0.328 0.25-0.005-0.028-0.017-0.044-0.022-0.067-0.022-0.128-0.039-0.256-0.061-0.383-0.033-0.217-0.139-0.306-0.355-0.311h-0.539c-0.328-0.006-0.383 0.056-0.383 0.378zM27.422 20.611c-0.15-0.039-0.283 0-0.422 0.056-2.439 1.022-4.972 1.678-7.6 1.989-0.806 0.094-1.617 0.156-2.428 0.178-1.478 0.039-2.956-0.044-4.422-0.239-0.989-0.133-1.972-0.317-2.944-0.55-2.056-0.495-4.039-1.206-5.928-2.156-0.489-0.244-0.967-0.517-1.45-0.778-0.211-0.117-0.345-0.083-0.456 0.117v0.094c0.067 0.089 0.122 0.189 0.206 0.267 2 1.789 4.255 3.139 6.778 4.050 1.217 0.439 2.467 0.761 3.739 0.972 0.778 0.128 1.556 0.211 2.345 0.25 0.167 0.006 0.333 0.011 0.5 0.022 0.039 0 0.078 0.011 0.117 0.017h0.983c0.039-0.005 0.078-0.017 0.117-0.017 0.828-0.022 1.656-0.1 2.478-0.222 1.189-0.178 2.355-0.45 3.494-0.817 1.645-0.533 3.206-1.244 4.633-2.228 0.156-0.106 0.317-0.211 0.444-0.345 0.239-0.244 0.128-0.578-0.183-0.661zM30.222 19.072c-0.044-0.233-0.222-0.322-0.422-0.389-0.317-0.106-0.644-0.156-0.978-0.183-0.611-0.050-1.222-0.022-1.822 0.089-0.667 0.122-1.3 0.339-1.861 0.728-0.067 0.044-0.133 0.1-0.172 0.167-0.033 0.050-0.039 0.128-0.028 0.189 0.017 0.072 0.095 0.089 0.167 0.083 0.033 0 0.067 0 0.1-0.006l1.083-0.117c0.533-0.050 1.067-0.083 1.6-0.044 0.228 0.017 0.45 0.067 0.667 0.122 0.239 0.061 0.344 0.244 0.355 0.483 0.017 0.372-0.067 0.728-0.161 1.083-0.194 0.717-0.461 1.411-0.739 2.1-0.017 0.044-0.039 0.094-0.044 0.139-0.022 0.139 0.056 0.222 0.189 0.194 0.078-0.017 0.167-0.061 0.222-0.117 0.206-0.2 0.417-0.4 0.589-0.622 0.595-0.767 0.944-1.645 1.15-2.589 0.039-0.167 0.067-0.339 0.094-0.505 0.011-0.261 0.011-0.533 0.011-0.806z"/>
+                          </svg>
+                          </button>
+                          <button
+                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                            aria-label="Delete"
+                            onclick="window.location.href='./invoice/index.html';"
+                          >
+                          <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke="#7e3af2" stroke-width="2" d="M3,12 L6,12 C6.5,14.5 9.27272727,17 12,17 C14.7272727,17 17.5,14.5 18,12 L21,12 M12,17 L12,20 M7.5,15.5 L5.5,17.5 M16.5,15.5 L18.5,17.5"/>
+                          </svg>
+                          
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                          <div>
+                            <p class="font-semibold">Kshitij Gavhane</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">
+                              10x Developer
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        &#8377; 46200.00
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                        >
+                          paid by Cash
+                        </span>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        6/10/2022
+                      </td>
+                      <td class="px-4 py-3">
+                        <div class="flex items-center space-x-4 text-sm">
+                          <button
+                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                            aria-label="Edit" disabled
+                            onclick="window.location.href='modals.html';"
+                          >
+                          <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.928 12.989c0.006-0.656 0-1.306 0-1.961v-1.961c0-0.072 0.022-0.111 0.078-0.15 0.639-0.444 1.339-0.672 2.122-0.617 0.694 0.050 1.261 0.389 1.561 1.206 0.183 0.494 0.228 1.011 0.228 1.539 0 0.483-0.039 0.961-0.189 1.422-0.317 0.989-1.039 1.372-1.983 1.328-0.65-0.028-1.217-0.278-1.744-0.65-0.050-0.044-0.078-0.089-0.072-0.156zM15.533 13.8c0.255 0.1 0.516 0.111 0.783 0.083 0.645-0.067 1.217-0.317 1.739-0.694 0.050-0.033 0.072-0.072 0.072-0.139-0.006-0.217 0-0.439 0-0.655 0-0.222-0.006-0.444 0-0.667 0-0.078-0.022-0.111-0.1-0.122-0.389-0.050-0.772-0.122-1.161-0.161-0.389-0.033-0.778-0.017-1.156 0.105-0.372 0.122-0.65 0.345-0.761 0.728-0.089 0.3-0.089 0.6 0.005 0.9 0.089 0.306 0.289 0.511 0.578 0.622zM32 6.222v19.556c0 1.472-1.194 2.667-2.667 2.667h-26.667c-1.472 0-2.667-1.194-2.667-2.667v-19.556c0-1.472 1.194-2.667 2.667-2.667h26.667c1.472 0 2.667 1.194 2.667 2.667zM20.472 7.55c0.022 0.095 0.050 0.189 0.089 0.283 0.917 2.256 1.828 4.517 2.75 6.772 0.078 0.194 0.094 0.356 0.011 0.55-0.156 0.344-0.272 0.7-0.433 1.039-0.145 0.306-0.372 0.528-0.706 0.622-0.233 0.061-0.472 0.072-0.717 0.050-0.117-0.011-0.233-0.039-0.35-0.044-0.156-0.011-0.233 0.061-0.239 0.222-0.006 0.156-0.006 0.311 0 0.461 0.005 0.255 0.089 0.372 0.344 0.417 0.261 0.044 0.522 0.089 0.789 0.094 0.794 0.017 1.428-0.3 1.839-0.995 0.161-0.272 0.311-0.561 0.428-0.855 1.1-2.783 2.194-5.572 3.289-8.361 0.033-0.083 0.061-0.167 0.072-0.256 0.022-0.133-0.039-0.2-0.172-0.205-0.311-0.005-0.617 0-0.928 0-0.172 0-0.294 0.078-0.355 0.239-0.022 0.061-0.050 0.128-0.072 0.189l-1.617 4.65c-0.117 0.339-0.233 0.672-0.361 1.033-0.022-0.050-0.033-0.078-0.044-0.105-0.6-1.661-1.2-3.328-1.8-4.989-0.094-0.261-0.194-0.528-0.294-0.789-0.050-0.139-0.15-0.222-0.3-0.222-0.355-0.006-0.711-0.011-1.067-0.006-0.122 0-0.183 0.089-0.156 0.205zM13.467 13.222c0.095 0.65 0.422 1.156 1 1.478 0.55 0.306 1.15 0.344 1.761 0.255 0.706-0.105 1.328-0.406 1.878-0.861 0.022-0.017 0.044-0.033 0.078-0.056 0.028 0.178 0.050 0.344 0.083 0.511 0.028 0.145 0.117 0.239 0.25 0.245 0.255 0.005 0.505 0.005 0.761 0 0.128-0.006 0.211-0.089 0.222-0.217 0.006-0.044 0.006-0.089 0.006-0.128v-4.933c0-0.2-0.011-0.4-0.039-0.6-0.089-0.6-0.344-1.094-0.883-1.411-0.311-0.183-0.656-0.278-1.011-0.328-0.167-0.022-0.333-0.039-0.506-0.061h-0.556c-0.044 0.005-0.089 0.016-0.139 0.016-0.456 0.022-0.906 0.078-1.344 0.194-0.283 0.072-0.556 0.178-0.833 0.272-0.167 0.056-0.25 0.178-0.244 0.361 0.005 0.156-0.006 0.311 0 0.461 0.005 0.228 0.1 0.289 0.317 0.228 0.361-0.094 0.728-0.194 1.094-0.267 0.572-0.105 1.15-0.15 1.728-0.067 0.3 0.044 0.583 0.133 0.783 0.389 0.172 0.222 0.233 0.489 0.245 0.761 0.017 0.383 0.011 0.772 0.017 1.156 0 0.022-0.005 0.039-0.011 0.067-0.022 0-0.044 0-0.061-0.005-0.489-0.117-0.983-0.2-1.489-0.228-0.528-0.028-1.050 0.006-1.55 0.178-0.6 0.211-1.083 0.572-1.367 1.156-0.228 0.461-0.256 0.944-0.189 1.433zM5.483 7.717v9.739c0 0.044 0 0.094 0.006 0.139 0.011 0.139 0.094 0.228 0.228 0.233 0.328 0.006 0.656 0.006 0.984 0 0.139 0 0.222-0.094 0.228-0.228 0.006-0.044 0.006-0.094 0.006-0.139v-3.372c0.050 0.039 0.078 0.067 0.105 0.089 0.833 0.694 1.789 0.922 2.839 0.717 0.95-0.189 1.605-0.772 2.039-1.622 0.322-0.644 0.461-1.339 0.483-2.056 0.028-0.794-0.056-1.578-0.378-2.317-0.394-0.911-1.050-1.517-2.039-1.717-0.15-0.033-0.306-0.045-0.456-0.067h-0.389c-0.067 0.011-0.133 0.016-0.2 0.028-0.65 0.078-1.239 0.322-1.766 0.705-0.111 0.078-0.217 0.167-0.328 0.25-0.005-0.028-0.017-0.044-0.022-0.067-0.022-0.128-0.039-0.256-0.061-0.383-0.033-0.217-0.139-0.306-0.355-0.311h-0.539c-0.328-0.006-0.383 0.056-0.383 0.378zM27.422 20.611c-0.15-0.039-0.283 0-0.422 0.056-2.439 1.022-4.972 1.678-7.6 1.989-0.806 0.094-1.617 0.156-2.428 0.178-1.478 0.039-2.956-0.044-4.422-0.239-0.989-0.133-1.972-0.317-2.944-0.55-2.056-0.495-4.039-1.206-5.928-2.156-0.489-0.244-0.967-0.517-1.45-0.778-0.211-0.117-0.345-0.083-0.456 0.117v0.094c0.067 0.089 0.122 0.189 0.206 0.267 2 1.789 4.255 3.139 6.778 4.050 1.217 0.439 2.467 0.761 3.739 0.972 0.778 0.128 1.556 0.211 2.345 0.25 0.167 0.006 0.333 0.011 0.5 0.022 0.039 0 0.078 0.011 0.117 0.017h0.983c0.039-0.005 0.078-0.017 0.117-0.017 0.828-0.022 1.656-0.1 2.478-0.222 1.189-0.178 2.355-0.45 3.494-0.817 1.645-0.533 3.206-1.244 4.633-2.228 0.156-0.106 0.317-0.211 0.444-0.345 0.239-0.244 0.128-0.578-0.183-0.661zM30.222 19.072c-0.044-0.233-0.222-0.322-0.422-0.389-0.317-0.106-0.644-0.156-0.978-0.183-0.611-0.050-1.222-0.022-1.822 0.089-0.667 0.122-1.3 0.339-1.861 0.728-0.067 0.044-0.133 0.1-0.172 0.167-0.033 0.050-0.039 0.128-0.028 0.189 0.017 0.072 0.095 0.089 0.167 0.083 0.033 0 0.067 0 0.1-0.006l1.083-0.117c0.533-0.050 1.067-0.083 1.6-0.044 0.228 0.017 0.45 0.067 0.667 0.122 0.239 0.061 0.344 0.244 0.355 0.483 0.017 0.372-0.067 0.728-0.161 1.083-0.194 0.717-0.461 1.411-0.739 2.1-0.017 0.044-0.039 0.094-0.044 0.139-0.022 0.139 0.056 0.222 0.189 0.194 0.078-0.017 0.167-0.061 0.222-0.117 0.206-0.2 0.417-0.4 0.589-0.622 0.595-0.767 0.944-1.645 1.15-2.589 0.039-0.167 0.067-0.339 0.094-0.505 0.011-0.261 0.011-0.533 0.011-0.806z"/>
+                          </svg>
+                          </button>
+                          <button
+                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                            aria-label="Delete"
+                            onclick="window.location.href='./invoice/recipt.html';"
+                          >
+                          <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke="#7e3af2" stroke-width="2" d="M3,12 L6,12 C6.5,14.5 9.27272727,17 12,17 C14.7272727,17 17.5,14.5 18,12 L21,12 M12,17 L12,20 M7.5,15.5 L5.5,17.5 M16.5,15.5 L18.5,17.5"/>
+                          </svg>
+                          
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -689,8 +627,8 @@
                           aria-label="Previous"
                         >
                           <svg
-                            aria-hidden="true"
                             class="w-4 h-4 fill-current"
+                            aria-hidden="true"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -769,7 +707,6 @@
                 </span>
               </div>
             </div>
-
           </div>
         </main>
       </div>

@@ -66,7 +66,7 @@
                       <div></div>
                   </div>
                   <div class="chatbox__footer">
-                      <input type="text" placeholder="Write a message...">
+                      <input type="text"  placeholder="Write a message...">
                       <button class="chatbox__send--footer send__button">Send</button>
                   </div>
               </div>
@@ -75,7 +75,7 @@
               </div>
           </div>
 
-          <script src="./app.js"></script>
+          <script src="./chatbot/app.js"></script>
 
 <!--          ============================================================================================================================================== -->
 

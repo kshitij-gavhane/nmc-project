@@ -6,7 +6,18 @@
     @page {
       size:8.5in 5in;
     }
+    @media print {
+
+  html, body {
+    height:100%; 
+    margin: 0 !important; 
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+}
   </style>
+
 
 <body style="font-family:'Times New Roman', Times, serif;letter-spacing:1px">
     <button onClick="window.print()">Print this page</button>
@@ -14,14 +25,14 @@
 
 
 
-        
+        <div class="container">
         
         <table style="table-layout: fixed; width: 100%; padding: 8px; ">
             <tbody>
                 <tr>
 
                     <td>
-                        <img src="../assets/images-favicon.png" alt="nmc-logo" width="50px">
+                        <img src="./images/images-favicon.png" alt="nmc-logo" width="50px">
                     </td>
 
                     <td width="20%"></td>
@@ -192,7 +203,7 @@
                     </tr>
                 </tbody>
             </table>
-
+        </div>
 
 
         </div>
