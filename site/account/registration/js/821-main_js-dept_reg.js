@@ -97,9 +97,9 @@ $(document).ready(function() {
 		$('#registeredFor1').prop('checked', false); 
 	}	
 
-	function refreshCaptcha(){
-		document.getElementById("captchaimg").src = 'captcha-service?t=' + new Date().getTime();
-	}
+	// function refreshCaptcha(){
+	// 	document.getElementById("captchaimg").src = 'captcha-service?t=' + new Date().getTime();
+	// }
 	
 	function validatePanNo(str){
 		var regex = /^[a-zA-Z0-9]*$/;
@@ -145,7 +145,7 @@ $(document).ready(function() {
 		var dept_city = form.elements["dept_city"].value;
 		var dept_password = form.elements["dept_password"].value;
 		var dept_cnf_password = form.elements["dept_cnf_password"].value;
-		var captcha = form.elements["captcha"].value;
+		// var captcha = form.elements["captcha"].value;
 		//var dept_undertacking = form.elements["dept_undertacking"];
 		var ex1 = document.getElementById('registeredFor');
         var ex2 = document.getElementById('registeredFor1');
@@ -317,7 +317,7 @@ $(document).ready(function() {
 		var dept_city = form.elements["dept_city"].value;
 		var dept_password = form.elements["dept_password"].value;
 		var dept_cnf_password = form.elements["dept_cnf_password"].value;
-		var captcha = form.elements["captcha"].value;
+		// var captcha = form.elements["captcha"].value;
 		//var dept_undertacking = form.elements["dept_undertacking"];
 		var ex1 = document.getElementById('registeredFor');
         var ex2 = document.getElementById('registeredFor1');

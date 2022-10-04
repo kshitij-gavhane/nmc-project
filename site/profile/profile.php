@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Bootstrap Table - Filter control</title>
-  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
-<link rel='stylesheet' href='//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'><link rel="stylesheet" href="./profile.css">
+<html lang="en">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile Information</title>
+    
+	
+<link rel='stylesheet' href='//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css'>
+<link rel="stylesheet" href="./style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#myTab a").click(function(e){
+        e.preventDefault();
+        $(this).tab("show");
+    });
+});
+</script>
 </head>
 <body>
+
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -25,105 +37,206 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                       Malhaar 
+                                        Kshiti Ghelani
                                     </h5>
                                     <h6>
-                                        Accountant
+                                        Web Developer and Designer
                                     </h6>
-                                   <p class="proile-rating"> <span>      </span></p>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
+                                    <p class="proile-rating"><span></span></p>
+                                
+                                 
+<div class="m-4">
+    <ul class="nav nav-pills" id="myTab">
+        <li class="nav-item" >
+            <a href="#home" class="nav-link active" style="color:white" >Personal information</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link"  style="color:white">Lease history</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link"  style="color:white">Documents</a>
+        </li>
+    </ul>
+    </div>
+    </div>
     
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                    </div>
-                </div>
-               
-
-                    <?php  
-                  $connect = mysqli_connect("localhost", "root", "","shopdatabase");  
-                   $query ="SELECT * FROM customerprofile ";  
-                   $result = mysqli_query($connect, $query);
-       
-                  if(mysqli_num_rows($result)>0){
-                
-                while($row = mysqli_fetch_array($result))  {
-
-                    
-                 ?>
-
-
-                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p></p>
-                            <a href=""></a><br/>
-                            
-                            <p></p>
-                            <a href=""></a><br/>
-                            
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            </div>
-                        </div>
+   
+    
 
 
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Name :-<?php echo $row["Name"];?></h3>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Email :-<?php echo $row["Email"];?> </h3>
-                            </div>
-                        </div>
+    <?php  
+    $connect = mysqli_connect("localhost", "root", "","shopdatabase");  
+     $query ="SELECT * FROM customerprofile ";  
+     $result = mysqli_query($connect, $query);
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Phone :-<?php echo $row["phone"];?></h3>
-                            </div>
-                        </div>
+    if(mysqli_num_rows($result)>0){
+  
+  while($row = mysqli_fetch_array($result))  {
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 >Profession :-<?php echo $row["profession"];?></h3>
-                            </div>
-                                </div>
-                                  <div class="row">
-                                            <div class="col-md-6">
-                                                <h3>User Id:- <?php echo $row["user id"];?></h3>
-                                        </div>
-                            </div>
-                            </div>
-                            
+      
+   ?>
 
-                            <?php
-                        }
-                    
-                    }
-                    
-                    ?>  
 
-                
+   
+
+
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+
+            <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">User Id :-<?php echo $row["user id"];?>
+                 <br>
+                <br>
+                </label>
+            </div>
+           
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Name:-<?php echo $row["Name"];?>
+                 <br>
+                <br>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Email= <?php echo $row["Email"];?>
+                <br>
+                <br>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Phone :-<?php echo $row["phone"];?>
+                <br>
+                <br>
+                </label>
+            </div>
 </div>
 
-</form>
+<div class="row">
+<div class="col-md-6">
+    <label style="color:#dbcdd5">Occupation :-<?php echo $row["phone"];?>
+    <br>
+    <br>
+    </label>
 </div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+    <label style="color:#dbcdd5">Address :-<?php echo $row["phone"];?>
+    <br>
+    <br>
+    </label>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="tab-pane fade" id="profile">
+            <h4 class="mt-2"style="color:blue"></h4>
+            <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Experience:- <?php echo $row["profession"];?>
+                <br>
+                <br>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Hourly Rate:-<?php echo $row["profession"];?>
+                <br>
+                <br>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label style="color:#dbcdd5">Total Projects= <?php echo $row["profession"];?>
+                <br>
+                <br>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+            <label style="color:#dbcdd5">Total Projects :-<?php echo $row["profession"];?>
+            <br>
+            <br>
+            </label>
+        </div>
+    </div>
+
+
+</div>
+<?php
+}
+
+}
+
+
+?>  
+
+
+
+        
+        <div class="tab-pane fade" id="messages">
+            <h4 class="mt-2"style="color:#dbcdd5">Documents</h4>
+            <p style="color:#dbcdd5">abcdefghijkal
+            
+            hbcdhbkvnjkrnvkmmek
+            bchjdsbcjndnjcnm
+            b cjsdbcndkvjnjfnv
+            gvdhdbjfjehfjn.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-2">
+<input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+</div>
+</div>
+
+
+
+
 </body>
 </html>
