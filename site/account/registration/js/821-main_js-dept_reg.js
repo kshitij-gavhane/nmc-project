@@ -248,8 +248,8 @@ $(document).ready(function() {
 			ErrorLabel("cnf_password_error", "");
 		}
 		
-		if (captcha.length == 0) {
-			ErrorLabel("cptcha_error", "Invalid Captcha.");
+		// if (captcha.length == 0) {
+		// 	ErrorLabel("cptcha_error", "Invalid Captcha.");
 		}else{
 			ErrorLabel("cptcha_error", "");
 		}
@@ -388,8 +388,8 @@ $(document).ready(function() {
 		} else if (dept_password != dept_cnf_password) {
 			showerror("cnf_password_error", "Password and Confirm password not same.")
 			return false;
-		}else if (captcha.length == 0) {
-			showerror("cptcha_error", "Invalid Captcha.")
+		// }else if (captcha.length == 0) {
+		// 	showerror("cptcha_error", "Invalid Captcha.")
 			return false;
 		} else {
 			
