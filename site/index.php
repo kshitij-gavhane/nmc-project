@@ -36,6 +36,14 @@
 </head>
 <body class="html front not-logged-in no-sidebars page-indexhtml i18n-en " >
 <div class="pageWrapper">
+<a class="navbtn" href="#"><i class="fa fa-navicon"></i>
+<svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path fill="#fff" d="M0 0h24v24H0z"/>
+        <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z"/>
+    </g>
+</svg></a>
+    
     
         <div class="top-bar main-bg">
         <div class="container">
@@ -63,7 +71,15 @@
                       </div>
                   </div>
                   <div class="chatbox__messages">
-                      <div></div>
+                      <div>
+                      <p class="text_message">Select your query from the list below or type in your query directly.<br/><br/>
+                                      Id.1> To know about zones under nmc<br/>
+                                      Id.2> to know main office address<br/>
+                                      Id.3> to contact support team<br/>
+                                      Type zone names to know about zone address<br/>
+              </p>
+
+                      </div>
                   </div>
                   <div class="chatbox__footer">
                       <input type="text"  placeholder="Write a message...">
@@ -126,10 +142,10 @@
 <nav  class="top-nav">
     <ul>
         <li class="first leaf">
-            <a href="index.html" title="" class="active">Home</a>
+            <a href="index.php" title="" class="active">Home</a>
         </li>
         <li class="expanded">
-            <a href="content/about-digital-india.html" title="">About </a>
+            <a href="about.php" title="">About </a>
             <ul>
                 <li>
                     <a href="content/introduction.html">Introduction</a>
@@ -139,11 +155,11 @@
                 </li>
             </ul>
         </li>
-        <li class="expanded"><a href="./home.php" title="">Market</a>
+        <li class="expanded"><a href="./market.php" title="">Market</a>
             <ul>
-                <li><a href="./home.php" title="" class="active">search Area</a>
+                <li><a href="./market.php" title="" class="active">search Area</a>
                 </li>
-                <li><a href="./home.php" title="" class="active">search Zone</a>
+                <li><a href="./market.php" title="" class="active">search Zone</a>
                 </li>
             </ul>
         </li>
@@ -210,13 +226,13 @@
 	<img src="../modules/writereaddata/files/slider1.jpg" alt="Technology"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/slider2.jpg" alt="Technology2"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/slider3.jpg" alt="Technology3"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
-	<img src="../modules/writereaddata/files/Banner-2_3.png" alt="Internet"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
+	<img src="../modules/writereaddata/files/slider4.jpg" alt="Internet"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/Banner-4.png" alt="Aatmnirbhr"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
-	<img src="../modules/writereaddata/files/1_0.png" alt="AKAM-Hindi"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
+	<!-- <img src="../modules/writereaddata/files/1_0.png" alt="AKAM-Hindi"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/4_2.png" alt="azaadi-1"/></li><li  data-link="https://apps.mgov.gov.in/Developer/deptreg_form" data-target="_blank" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/Old-DI-Website-Banner-3.jpg" alt="mobile seva"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
 	<img src="../modules/writereaddata/files/Old-DI-Website-Banner-2.jpg" alt="ashwini"/></li><li  data-target="_self" data-transition="fade" data-masterspeed="1500" data-slotamount="7">
-	<img src="../modules/writereaddata/files/Old-DI-Website-Banner-1.jpg" alt="rajeev chndraskhr"/></li></ul>
+	<img src="../modules/writereaddata/files/Old-DI-Website-Banner-1.jpg" alt="rajeev chndraskhr"/></li></ul> -->
 <div class="tp-bannertimer tp-bottom"></div>
 </div>
 </div>
@@ -241,19 +257,17 @@
     <div class="break-news-slider">
                 <div class="views-row views-row-1 views-row-odd views-row-first">
                 
-            <a href="https://negd.gov.in/sites/default/files/tender/CorrigendumDikshaMSIPExtension_0.pdf" target="_blank"> Selection of Agency for Technical Administration of DIKSHA Platform</a>            </div>
+            <a href="#" target="_blank"> आपत्कालीन परिस्थितीकरिता झोननिहाय २४ तास कार्यरत नियंत्रण कक्ष</a>            </div>
                 <div class="views-row views-row-2 views-row-even">
                 
-            <a href="https://dic.gov.in/images/career/Adv-DevDotnet.pdf" target="_blank">Digital India Corporation is currently inviting applications for &quot; Developer (Dotnet)&quot;.</a>            </div>
+            <a href="#" target="_blank"> नागपूर महानगरपालिका सार्वत्रिक निवडणूक २०२२</a>            </div>
                 <div class="views-row views-row-3 views-row-odd">
                 
-            <a href="https://dic.gov.in/images/career/ProjectManager-Cum-SeniorSoftwareDeveloper.pdf" target="_blank">Digital India Corporation is currently inviting applications for &quot;Project Manager Cum Senior Software Developer&quot;.  </a>            </div>
+            <a href="#" target="_blank">समाज कल्याण विभागामार्फतदिव्यांग योजने करीता लिंक   .  </a>            </div>
                 <div class="views-row views-row-4 views-row-even">
                 
-            Call for Proposal-Cohort 2 under MeitY Quantum Computing            </div>
-                <div class="views-row views-row-5 views-row-odd views-row-last">
-                
-            <a href="https://dic.gov.in/images/career/Advt-ExecutiveAssistant.pdf" target="_blank">Digital India Corporation is currently inviting applications for &quot;Executive Assistant&quot;.  </a>            </div>
+                महानगरपालिका क्षेत्रात श्री गणेश विसर्जनाकरिता
+निर्माण करण्यात येणाऱ्या कृत्रिम तलावांच्या स्थळांची यादी               </div>
             </div>
 </div>    </div>
   
@@ -332,50 +346,84 @@
                             <i class="tbl top-bord main-bg"></i>
                             <div class="head-2">
                                 <h3 class="title-heading "></h3>
-                                <h4 class="main-color bold"><b class="lft fa fa-circle-o"></b>IN FOCUS<b class="rit fa fa-circle-o"></b></h4>
+                                <h4 class="main-color bold"><b class="lft fa fa-circle-o"></b>FEATURES<b class="rit fa fa-circle-o"></b></h4>
                             </div>
                             <div class="sub-heading"></div>
                         </div>
                     </div>
 
-                    <!-- <div  class = 'container'>
+                    <div  class = 'container'>
                         <div  class = 'col-xs-2 col-sm-2 col-md-12'>
                             <div  data-slider-count="6" data-scroll-amount="6" data-slider-speed="300" data-slider-infinite="1" data-slider-dots="0" data-slider-arrows="1" class="horizontal-slider shortcode-slick">
-                                <a  href="https://www.cowin.gov.in/home" class="infocuslink" target="_blank">
+                                <a  href="#" class="infocuslink" target="_blank">
                                     <div  style = ' text-align:center;'>
-                                        <img class="infocusimg" src="../modules/writereaddata/files/CoWIN-Logo.png" alt="Cowin" title="Cowin"/>
+                                        <img class="infocusimg" src="../modules/writereaddata/files/dashboard.png" alt="Dashboard" title="Dashboard"/>
     
                                     </div>
 
                                     <div  class = 'infocustitle text-center'>
                                         <div class="heading sub-head">
-                                            <h5 class="head  " ><span class="main-color">Cowin</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                            <h5 class="head  " ><span class="main-color">Dashboard</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
                                         </div>
     
                                     </div>
 
                                 </a>
 
-                                <a  href="content/outreach-campaign.html" class="infocuslink" target="_self">
-
-                                    <img class="infocusimg" src="../modules/writereaddata/files/outreach-programme.png" alt="" title=""/>
-    
-    
+                                <a  href="#" class="infocuslink" target="_self">
+                                    <img class="infocusimg" src="../modules/writereaddata/files/chatbot.png" alt="Chatbot" title="Chatbot"/>
                                     <div  class = 'text-center'>
                                         <div class="heading sub-head">
-                                            <h5 class="head  " >            <span class="main-color">OUTREACH CAMPAIGN</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                            <h5 class="head  " >            <span class="main-color">Chatbot</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
                                         </div>
-    
                                     </div>
-
                                 </a>
+                                <a  href="#" class="infocuslink" target="_self">
+                                    <img class="infocusimg" src="../modules/writereaddata/files/recurring-payment.png" alt="Rent Pay" title="Rent Pay"/>
+                                    <div  class = 'text-center'>
+                                        <div class="heading sub-head">
+                                            <h5 class="head  " >            <span class="main-color">Rent Pay</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a  href="#" class="infocuslink" target="_self">
+                                    <img class="infocusimg" src="../modules/writereaddata/files/invoice.png" alt="Invoice" title="Invoice"/>
+                                    <div  class = 'text-center'>
+                                        <div class="heading sub-head">
+                                            <h5 class="head  " >            <span class="main-color">Invoice Generation</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a  href="#" class="infocuslink" target="_self">
+                                    <img class="infocusimg" src="../modules/writereaddata/files/bill.png" alt="Recipt" title="Recipt"/>
+                                    <div  class = 'text-center'>
+                                        <div class="heading sub-head">
+                                            <h5 class="head  " >            <span class="main-color">e-Recipt</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a  href="#" class="infocuslink" target="_self">
+                                    <img class="infocusimg" src="../modules/writereaddata/files/market.png" alt="market" title="market"/>
+                                    <div  class = 'text-center'>
+                                        <div class="heading sub-head">
+                                            <h5 class="head  " >            <span class="main-color">Market info</span>&nbsp;                         </h5>                            <span class="divider gray mb-20 mt-25 center"></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+
+
+
+
+
 
                             </div>
 
 
 
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,7 +461,7 @@
     
     
 </figure>
-<div class="feature-details-hidden">									<h5 class="bold feature-head main-color">All Announcements</h5>									<a class="cws-button btn btn-md shape btn-turquoise with-icon new-angle" href="newstrack.html">View All</a>								</div>
+<div class="feature-details-hidden">									<h5 class="bold feature-head main-color">All Announcements</h5>									<a class="cws-button btn btn-md shape btn-turquoise with-icon new-angle" href="#">View All</a>								</div>
 </div>
 <div  class = 'fx feature-img wow fadeInUp col-md-3' data-wow-delay = '400ms' data-wow-duration = '500ms'>
 <div  class = 'newstrackfront-title-length'><div class="view view-portfolio-grid view-id-portfolio_grid view-display-id-page_2 view-dom-id-7a65322e4df90233b7d4e45035fc37c8">
@@ -432,13 +480,13 @@
          
         
         <figure class="shape new-angle">
-       <img src="../modules/writereaddata/files/project/ai.jpg" alt="#">
+       <img src="../modules/writereaddata/files/project/market.jpg" alt="#">
         </figure>
        
     </div>
     <div class="name-holder">
-        <h4><a href="https://digitalindia.gov.in/writereaddata/files/NASSCOM AI gamechangers compendium - 2021 edition.pdf" target="_blank">Nasscom AI Gamechangers Compendium - 2021</a></h4>
-        <h5><a href="newstrack.html" class="home-newstrack-title">Statecraft</a></h5>
+        <h4><a href="#" target="_blank">Market News/ Article</a></h4>
+        <h5><a href="#" class="home-newstrack-title">nmc-nagpur</a></h5>
     </div>
           </td>
               </tr>
@@ -470,13 +518,13 @@
          
         
         <figure class="shape new-angle">
-       <img src="../modules/writereaddata/files/project/Track%2059.jpg" alt="#">
+       <img src="../modules/writereaddata/files/project/kalamna.jpg" alt="#">
         </figure>
        
     </div>
     <div class="name-holder">
-        <h4><a href="https://timesofindia.indiatimes.com/city/kolkata/bengal-cmos-e-samadhan-bags-top-award/articleshow/77294005.cms" target="_blank">Bengal CMO’s E-Samadhan bags top award</a></h4>
-        <h5><a href="newstrack.html" class="home-newstrack-title">Enterprise</a></h5>
+        <h4><a href="#" target="_blank">Market News/Article</a></h4>
+        <h5><a href="#" class="home-newstrack-title">nmc-nagpur</a></h5>
     </div>
           </td>
               </tr>
@@ -508,13 +556,13 @@
          
         
         <figure class="shape new-angle">
-       <img src="../modules/writereaddata/files/project/4_0.png" alt="#">
+       <img src="../modules/writereaddata/files/project/vegies.jpg" alt="#">
         </figure>
        
     </div>
     <div class="name-holder">
-        <h4><a href="https://generalnewsworld.com/slum-dwellers-in-india-get-unique-digital-addresses-through-google/" target="_blank">Slum dwellers in India get distinctive digital addresses by means of Google</a></h4>
-        <h5><a href="newstrack.html" class="home-newstrack-title">Human Stories</a></h5>
+        <h4><a href="#" target="_blank">Market News/Article</a></h4>
+        <h5><a href="#" class="home-newstrack-title">nmc-nagpur</a></h5>
     </div>
           </td>
               </tr>
@@ -552,34 +600,34 @@
     <div class="entity entity-bean bean-shortcode clearfix" about="/block/testimonials---index" typeof="">
 
   <div class="content">
-    <div class="field field-name-field-bean-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div  class = 'section parallax' style = 'background-image: url("https://digitalindia.gov.in/writereaddata/files/superfine/bg-01.jpg");'>
+    <div class="field field-name-field-bean-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div  class = 'section parallax' style = 'background-image: url("../site/img/announce_backg.png");'>
 <!--<div class="heading full-heading alter-gry" style="background-image:url('writereaddata/files/bg2_0.jpg')">-->	<div class="heading full-heading alter-gry" style="background-color:#fff;">			<h3 class="inner-head">Testi<span class="main-color heavy-font">monials</span></h3>						<!--<h5 class="small-heading"><span class="main-color">Checkout </span>our features</h5>	-->				</div>
 <div  class = 'container'>
 <div  data-slider-count="3" data-scroll-amount="1" data-slider-speed="300" data-slider-infinite="1" data-slider-dots="1" data-slider-arrows="0" class="horizontal-slider shortcode-slick">
         
 <div  class = 'testimonials testimonials-4'>
 <div   class = 'testimonials-bg white shape lg new-angle video-box youtube' style = 'padding:0;overflow:hidden;height:200px;'>
-    <iframe src="http://www.youtube.com/embed/zIwCliQxWEQ?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/IYt88lLCSdQ?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
   </div>
 </div>
 <div  class = 'testimonials testimonials-4'>
 <div   class = 'testimonials-bg white shape lg new-angle video-box youtube' style = 'padding:0;overflow:hidden;height:200px;'>
-    <iframe src="http://www.youtube.com/embed/7cPt7e1alwA?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/qi36ea_xX1I?showinfo=0&amp;wmode=opaque" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
   </div>
 </div>
 <div  class = 'testimonials testimonials-4'>
 <div   class = 'testimonials-bg white shape lg new-angle video-box youtube' style = 'padding:0;overflow:hidden;height:200px;'>
-    <iframe src="http://www.youtube.com/embed/051oT9J8paw?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/cs6rubuNsio?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
   </div>
 </div>
 <div  class = 'testimonials testimonials-4'>
 <div   class = 'testimonials-bg white shape lg new-angle video-box youtube' style = 'padding:0;overflow:hidden;height:200px;'>
-    <iframe src="http://www.youtube.com/embed/upXJoWdXkM0?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/tOFMVA-qHOc?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
   </div>
 </div>
 <div  class = 'testimonials testimonials-4'>
 <div   class = 'testimonials-bg white shape lg new-angle video-box youtube' style = 'padding:0;overflow:hidden;height:200px;'>
-    <iframe src="http://www.youtube.com/embed/eP1Aq68sjl0?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    <iframe src="https://www.youtube.com/embed/mR2ScFy_obQ?showinfo=0&amp;wmode=opaque"   frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
   </div>
 </div>
 </div></div></div></div></div></div></div>
@@ -596,143 +644,27 @@
 <div  style = 'padding-bottom: 10px; padding-top: 10px;' id = 'clientsDiv' class = 'container'>
         <div  class="clients horizontal-slider shortcode-slick" data-slider-count="6" data-scroll-amount="6" data-slider-speed="300" data-slider-infinite="1" data-slider-dots="0" data-slider-arrows="1">
         
-    <a  href="https://data.gov.in/" target="_blank">
 
-        <img  src="../modules/writereaddata/files/9_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://etaal.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/4_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://www.meity.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/MeitY%20logo.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://negd.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/2_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://digilocker.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/6_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://www.india.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/8_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://stpi.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/STPI.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://cdac.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/CDAC.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://www.csc.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/CSCs.png" alt="" title=""/>
-    
-    
-</a>
 
     <a  href="https://www.mygov.in/" target="_blank">
-
         <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="http://bbnl.nic.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/10_0.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://apps.mgov.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/5_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://jeevanpramaan.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/7_1.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://vikaspedia.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/11_0.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="http://cca.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/12_0.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://ras.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/19_0.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://www.passportindia.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/20_0.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://www.nixi.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/NIXI.png" alt="" title=""/>
-    
-    
-</a>
-
-    <a  href="https://ecourts.gov.in/" target="_blank">
-
-        <img  src="../modules/writereaddata/files/22_0.png" alt="" title=""/>
-    
-    
-</a>
-
+    </a>
+    <a  href="https://www.mygov.in/" target="_blank">
+        <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
+    </a>
+    <a  href="https://www.mygov.in/" target="_blank">
+        <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
+    </a>
+    <a  href="https://www.mygov.in/" target="_blank">
+        <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
+    </a>
+    <a  href="https://www.mygov.in/" target="_blank">
+        <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
+    </a>
+    <a  href="https://www.mygov.in/" target="_blank">
+        <img  src="../modules/writereaddata/files/3_1.png" alt="" title=""/>
+    </a>
     </div>
-
-
-
 </div>
  </div></div></div>  </div>
 </div>
@@ -751,11 +683,9 @@
 <div id="block-block-40" class="block block-block">
                      <div class="content">
     <div class="float-sm">
-<div class="fl-fl float-fb"><img src="writereaddata/files/center.png" /><a href="./market/index.php" target="_blank">Show Markets</a></div>
-
-<div class="fl-fl float-tw"><img src="writereaddata/files/state1.png" /><a href="#" target="_blank"> Pay Rent</a></div>
-
-<div class="fl-fl float-gp"><img src="writereaddata/files/state2.png" /><span class="fltspn" onclick="window.open('#')"> Dashboard</span></div>
+<div class="fl-fl float-fb"><img src="writereaddata/files/center.png" style="padding:3% ;" /><a href="./market.php" target="_blank"> Show Markets</a></div>
+<div class="fl-fl float-tw"><img src="writereaddata/files/state1.png" style="padding:3% ;" /><a href="./account/login/index.html" target="_blank"> Pay Rent</a></div>
+<div class="fl-fl float-gp"><img src="writereaddata/files/state2.png" style="padding:3% ;" /> <a href="./account/select/select.php" target="_blank"> Dashboard</a></div>
 </div>
 </div>
 </div>
@@ -770,8 +700,35 @@
                     <div id="block-menu-menu-footer-menu" class="block block-menu">
                         <h3>Useful Links</h3>
                         <div class="content">
-                            <ul class="menu-widget" ><li class="first leaf"><a href="all-announcement.html" title="">Announcement</a></li><li class="leaf"><a href="content/accessibility-statement.html" title="">Accessibility Statement</a></li><li class="leaf"><a href="content/disclaimer.html" title="">Disclaimer</a></li><li class="leaf"><a href="content/help.html" title="">Help</a></li><li class="leaf"><a href="content/right-information.html" title="">Right to Information</a></li><li class="leaf"><a href="content/terms-conditions.html" title="">Terms & Conditions</a></li><li class="leaf"><a href="content/website-policies.html">Website Policies</a></li><li class="leaf"><a href="sitemap.html" title="">Sitemap</a></li><li class="last leaf"><a href="content/statistics-0">statistics</a></li></ul>
-                        </div>
+                        <ul class="menu-widget">
+  <li class="first leaf">
+    <a href="https://www.nmcnagpur.gov.in/c1fea270c48e8079d8ddf7d06d26ab52" title="">ई-न्यूजलेटर</a>
+  </li>
+  <li class="leaf">
+    <a href="https://www.nmcnagpur.gov.in/smart-city-nagpur" title="">स्मार्ट सिटी नागपूर</a>
+  </li>
+  <li class="leaf">
+    <a href="https://www.nmcnagpur.gov.in/grievance/public/login" title="">आपली तक्रार स्थिती जाणून घ्या</a>
+  </li>
+  <li class="leaf">
+    <a href="https://www.nmcnagpur.gov.in/grievance/public/login" title="">तुमची तक्रार नोंदवा</a>
+  </li>
+  <li class="leaf">
+    <a href="https://www.nmcnagpur.gov.in/assets/250/2018/10/mediafiles/swachh.pdf" title="">स्वच्छ नगर</a>
+  </li>
+  <li class="leaf">
+    <a href="#" title="">Terms & Conditions</a>
+  </li>
+  <li class="leaf">
+    <a href="#">Website Policies</a>
+  </li>
+  <li class="leaf">
+    <a href="#" title="">Sitemap</a>
+  </li>
+  <li class="last leaf">
+    <a href="#">statistics</a>
+  </li>
+</ul>                        </div>
                     </div>
 
                     <div  style = 'padding-top: 5px; padding-bottom: 5px; background-color: #337ab7; padding-left: 2px; padding-right: 2px;'>
@@ -793,17 +750,11 @@
                         <div class="content">
                             <ul class="details">
                                 <li><span>e-governance cell NMC Nagpur</span></li>
-	                            <li><i class="fa fa-map-marker shape new-angle"></i><span> Ministry of Electronics &amp; IT <br />(Government of India) <br />Electronics Niketan, 6, CGO Complex,<br /> Lodhi Road, New Delhi-110003</span></li>
+                                   
+	                            <li><i class="fa fa-map-marker shape new-angle"></i><span> 21-23, Mahanagar Palika Marg,<br />Near Vidhan Bhavan, Collectors Colony,<br /> Civil Lines, Nagpur, <br>Maharashtra 440001</span></li>
 	                            <li><i class="fa fa-envelope shape new-angle"></i><span>email@email[dot]gov[dot]in</span></li>
 	                            <li><i class="fa fa-phone shape new-angle"></i><span>+91-xxxxxxxxxxx</span></li>
                             </ul>
-                            <div class="modal show-modal bbbp-body" style="position: inherit; bottom: 40px !important;">
-                                <div class="modal-content bbbp-content">
-                                    <h1>Watch Hon'ble PM's LIVE Interaction with beneficiaries of Digital India on July 1, 2021 at 11:00am on
-                                        <a href="https://pmindiawebcast.nic.in/" target="_blank" style="color: #ed4000;">https://pmindiawebcast.nic.in/</a>
-                                    </h1>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -814,13 +765,13 @@
 
                 </div>
                 <div  class = 'last contact-widget col-md-3'>
-                    <div  style = 'fa fa-koo { border: 1px solid; padding: 11px 4px;}i.fa.fa-koo:after { content: 'Koo' class = ' wow ="""=""' data-wow-delay = '="""=""ms' data-wow-duration = '="""=""ms'>
+                    <div   class = ' wow ="""=""' data-wow-delay = '="""=""ms' data-wow-duration = '="""=""ms'>
                         <div class="heading sub-head">
                             <h3 class="head  " ><span class="main-color">Connect us on</span>&nbsp;</h3>                                
                         </div>
                     </div>
 
-                    <div  style = 'fa fa-koo {border: 1px solid;padding: 11px 4px;}i.fa.fa-koo:after {content: 'Koo';}' class = ' wow ="""="" fa-koo' data-wow-delay = '="""=""ms' data-wow-duration = '="""=""ms'>
+                    <div   class = ' wow ="""="" fa-koo' data-wow-delay = '="""=""ms' data-wow-duration = '="""=""ms'>
                         <ul class="siconul">
                             <li>
                                 <a href="#"><i class="fa fa-facebook sicon"></i>&nbsp;&nbsp;&nbsp;NMC Nagpur FACEBOOK</a>
@@ -846,8 +797,8 @@
     </div>
 <div  class = 'footer-bottom'>
 <div  class = 'container'>
-    <div  class = 'row'> Content owned &amp; provided by the respective Central Government Departments and the Programme coordinated by Ministry of Electronics &amp; Information Technology, Government Of India. This portal is designed and developed by Ministry of Electronics &amp; Information Technology, Government of India / NIC.
-        <p>This Website belongs to Ministry of Electronics and IT, Government of India</p>
+    <div  class = 'row'> Content owned &amp; provided by the respective Government Departments and the Programme coordinated by Nagpur Munciple Corporation, Nagpur. This portal is designed and developed for Nagpur Munciple Corporation / NMC by SVPCET Students.
+        <p>This Website belongs to market department, NMC nagpur</p>
     </div>
 </div>
 </div>
