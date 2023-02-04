@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Validate credentials
   if (empty($username_err) && empty($password_err)) {
     // Prepare a select statement
-    $sql = "SELECT id, username, password FROM users WHERE username = ?";
+    $sql = "SELECT id, username, password FROM log_users WHERE username = ?";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       // Bind variables to the prepared statement as parameters
@@ -840,7 +840,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             </div>
             <div class="p-3">
-              <a href="../registration/index.html" class="" style="color: #370a9a; text-align: left">Create New Account. Signup Now</a>
+              <a href="/site/account/registration/register.php" class="" style="color: #370a9a; text-align: left">Create New Account. Signup Now</a>
             </div>
           </div>
         </form>
