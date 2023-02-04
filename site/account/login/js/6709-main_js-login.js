@@ -33,10 +33,6 @@ togglePassword.addEventListener("click", function (e) {
 const toggleReg = document.querySelector("#toggleReg");
 const pass = document.querySelector("#id_reg");
 
-function refreshCaptcha() {
-	document.getElementById("captchaimg").src = 'captcha-service?t='
-			+ new Date().getTime();
-}
 function showModal(data) {
 	var span = document.getElementById('error_text');
 	span.innerText = data;
@@ -63,7 +59,7 @@ function validateFormData() {
 	var form = document.forms["login_form"];
 	var email = form.elements["email"].value;
 	var password = form.elements["password"].value;
-	var captcha = form.elements["captcha"].value;
+	// var captcha = form.elements["captcha"].value;
 
 	if (email.length == 0) {
 		showerror("Enter Email ID");
@@ -77,12 +73,12 @@ function validateFormData() {
 		showerror("Please Enter Password");
 		return false;
 	}
-	if (captcha.length == 0) {
-		showerror("Enter Captcha.");
-		return false;
-	} else {
-		return true;
-	}
+	// if (captcha.length == 0) {
+	// 	showerror("Enter Captcha.");
+	// 	return false;
+	// } else {
+	// 	return true;
+	// }
 }
 
 function validateEmail(elementValue) {

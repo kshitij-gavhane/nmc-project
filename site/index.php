@@ -183,10 +183,10 @@
                 <a href="./account/select/select.php" title="">Login/Signup</a>
                 <ul>
                     <li>
-                        <a href="./account/login/admin_login/admin.html" target="_self" title="">Admin Login</a>
+                        <a href="/site/admin-dashboard/login.php" target="_self" title="">Admin Login</a>
                     </li>
                     <li>
-                        <a href="./account/login/index.html" title="">Customer Login</a>
+                        <a href="/site/account/login/index.php" title="">Customer Login</a>
                     </li>
                 </ul>
             </li> 
