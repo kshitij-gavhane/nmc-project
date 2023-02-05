@@ -132,7 +132,7 @@
 <header class="top-head boxed-transparent dark " data-sticky="true">
     <div class="container ">
         <div class="logo">
-            <h1><a href="index.html"><img alt="" src="../modules/writereaddata/files/Headerlogo_0.png" /></a></h1>
+            <h1><a href="index.php"><img alt="" src="../modules/writereaddata/files/Headerlogo_0.png" /></a></h1>
         </div>
                     <div class="f-right responsive-nav">
                   <div class="region region-navigation">
