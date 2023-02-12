@@ -56,7 +56,7 @@ ob_end_flush();
 	#login-left {
 		position: absolute;
 		left: 0;
-		width: 60%;
+		width: calc(60%);
 		height: calc(100%);
 		background: #59b6ec61;
 		display: flex;

@@ -1,3 +1,23 @@
+<?php
+session_start();
+ /* Attempt to connect to MySQL database */
+$link = new mysqli('localhost','root', '', 'final');
+ // Check connection
+if($link === false){
+    die("ERROR: Could not connect." . mysqli_connect_error());
+}
+else
+{
+  if($_SESSION["loggedin"]== true)
+  {
+
+  }
+  else
+  {
+    header('Location:./site/account/login/index.php');
+  }
+}
+?>
 <!DOCTYPE html>
 <html  x-data="data()" lang="en">
   <head>

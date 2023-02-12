@@ -145,7 +145,7 @@
             <a href="index.php" title="" class="active">Home</a>
         </li>
         <li class="expanded">
-            <a href="about.html" title="">About </a>
+            <a href="about.php" title="">About </a>
             <ul>
                 <li>
                     <a href="content/introduction.html">Introduction</a>

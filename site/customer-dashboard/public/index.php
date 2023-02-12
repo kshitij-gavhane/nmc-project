@@ -1,3 +1,23 @@
+<?php
+session_start();
+ /* Attempt to connect to MySQL database */
+$link = new mysqli('localhost','root', '', 'final');
+ // Check connection
+if($link === false){
+    die("ERROR: Could not connect." . mysqli_connect_error());
+}
+else
+{
+  if($_SESSION["loggedin"]== true)
+  {
+      
+  }
+  else
+  {
+    header('Location:./site/account/login/index.php');
+  }
+}
+?>
 <!DOCTYPE html>
 <html x-data="data()" lang="en">
 
@@ -23,6 +43,10 @@
         <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
           Customer Panel (v1)
         </a>
+        <?php 
+    
+      echo "Welcome back ". $_SESSION['aadhar']."!"  
+      ?>
         <ul class="mt-6">
           <li class="relative px-6 py-3">
             <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
@@ -194,8 +218,12 @@
                 <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                   ग्राहकाचे नाव
                 </p>
+                <?php
+                error_reporting(0);
+                 echo $_SESSION['owner_name'];
+                 ?>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  श्री. रायबाबु रामकृष्ण ढेंगरे
+                
                 </p>
               </div>
             </div>
@@ -211,7 +239,10 @@
                   एकूण भाडे
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  &#8377 9,077
+                  &#8377 <?php
+                  error_reporting(0);
+                  echo $_SESSION['total'];
+                  ?>
                 </p>
               </div>
             </div>
@@ -227,7 +258,10 @@
                   उर्वरित रक्कम
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  &#8377 7376
+                  &#8377 <?php
+                  error_reporting(0);
+                  echo $_SESSION['bakaya_rent'];
+                  ?>
                 </p>
               </div>
             </div>
@@ -243,7 +277,11 @@
                   देय रक्कम
                 </p>
                 <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                  &#8377 1701
+                  &#8377 <?php
+                  error_reporting(0);
+                  $paid = $_SESSION['total']-$_SESSION['bakaya_rent'];
+                  echo $paid;
+                  ?>
                 </p>
               </div>
             </div>
@@ -413,3 +451,20 @@
 </body>
 
 </html>
+<?php
+$aadhar = $_SESSION["aadhar"];
+$query ="SELECT * FROM demand WHERE aadhar='$aadhar'"; //aadhar is table column name
+$is_query_run=mysqli_query($link,$query);
+if($is_query_run)
+{ while ($query_executed = mysqli_fetch_assoc($is_query_run))
+  {
+      // these four line is for four column
+      $_SESSION['owner_name'] = $query_executed['owner_name'];
+      $_SESSION['total'] = $query_executed['total'];
+      $_SESSION['bakaya_rent'] = $query_executed['bakaya_rent'];
+     
+      
+  }
+}
+
+?>

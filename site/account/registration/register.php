@@ -806,7 +806,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								<a href="website_accessibility.html" class="footer-link">Accessibility</a>
 							</li>
 							<li>
-								<a href="about.html" class="footer-link">About Us</a>
+								<a href="about.php" class="footer-link">About Us</a>
 							</li>
 
 						</ul>
