@@ -7,4 +7,3 @@ session_unset();
 // Redirect to login page
 header("location: /site/");
 exit;
-?>

@@ -14,7 +14,7 @@ else
   }
   else
   {
-    header('Location:./site/account/login/index.php');
+    header('Location: ./site/account/login/index.php');
   }
 }
 ?>

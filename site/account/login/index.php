@@ -2,27 +2,25 @@
 // Initialize the session
 session_start();
 
-// Check if the user is already logged in, if yes then redirect him to welcome page
+// Check if the user is already logged in, if yes then redirect him to customer dashboard
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-  header("location: /site/customer-dashboard/public/index");
+  header("location: /site/customer-dashboard/public/index.php");
   exit;
 }
-
 // Include config file
 require_once "config.php";
-
 // Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = $login_err = "";
+$aadhar = $password = "";
+$aadhar_err = $password_err = $login_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Check if username is empty
-  if (empty(trim($_POST["username"]))) {
-    $username_err = "Please enter username.";
+  if (empty(trim($_POST["aadhar"]))) {
+    $aadhar_err = "Please enter aadhar number.";
   } else {
-    $username = trim($_POST["username"]);
+    $aadhar = trim($_POST["aadhar"]);
   }
 
   // Check if password is empty
@@ -33,16 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Validate credentials
-  if (empty($username_err) && empty($password_err)) {
+  if (empty($aadhar_err) && empty($password_err)) {
     // Prepare a select statement
-    $sql = "SELECT id, username, password FROM log_users WHERE username = ?";
+    $sql = "SELECT id, aadhar, password FROM log_users WHERE aadhar = ?";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       // Bind variables to the prepared statement as parameters
-      mysqli_stmt_bind_param($stmt, "s", $param_username);
+      mysqli_stmt_bind_param($stmt, "s", $param_aadhar);
 
       // Set parameters
-      $param_username = $username;
+      $param_aadhar = $aadhar;
 
       // Attempt to execute the prepared statement
       if (mysqli_stmt_execute($stmt)) {
@@ -52,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if username exists, if yes then verify password
         if (mysqli_stmt_num_rows($stmt) == 1) {
           // Bind result variables
-          mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+          mysqli_stmt_bind_result($stmt, $id, $aadhar, $hashed_password);
           if (mysqli_stmt_fetch($stmt)) {
             if (password_verify($password, $hashed_password)) {
               // Password is correct, so start a new session
@@ -61,18 +59,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               // Store data in session variables
               $_SESSION["loggedin"] = true;
               $_SESSION["id"] = $id;
-              $_SESSION["username"] = $username;
+              $_SESSION["aadhar"] = $aadhar;
+              $_SESSION["password"] = $hashed_password;
 
-              // Redirect user to welcome page
-              header("location: /site/customer-dashboard/public/index");
-            } else {
+
+              // Redirect user to customer dashboard
+              header("location: /site/customer-dashboard/public/index.php");
+            } else 
+            {
               // Password is not valid, display a generic error message
-              $login_err = "Invalid username or password.";
+              $login_err = "Invalid aadhar or password.";
             }
           }
         } else {
           // Username doesn't exist, display a generic error message
-          $login_err = "Invalid username or password.";
+          $login_err = "Invalid aadhar or password.";
         }
       } else {
         echo "Oops! Something went wrong. Please try again later.";
@@ -86,6 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Close connection
   mysqli_close($link);
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -227,6 +231,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     form.sign-in-form {
       z-index: 2;
+    }
+
+    .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
     }
 
     form.sign-up-form {
@@ -734,6 +759,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         padding: 0.5rem 1rem;
       }
 
+
       .panel p {
         opacity: 0;
       }
@@ -779,6 +805,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </style>
 
 </head>
+
 <body>
 
   <div class="container">
@@ -802,16 +829,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="username" name="username"  value="<?php echo $username; ?>" autocomplete="off" placeholder="Registered Email ID" required="required" autofocus="autofocus">
-            <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            <input type="text" name="aadhar" value="<?php echo $aadhar; ?>" autocomplete="off" placeholder="Registered Addhar" required="required" autofocus="autofocus">
+            <span class="invalid-feedback"><?php echo $aadhar_err; ?></span>
 
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+            <input type="password" id="id_password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
             <span class="invalid-feedback"><?php echo $password_err; ?></span>
 
-            <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+            <i class="far fa-eye" id="togglePassword" style="cursor: pointer;" onclick="veri()"></i>
+            <script>
+              function veri() {
+                const togglePassword = document.querySelector("#togglePassword");
+                const password = document.querySelector("#id_password");
+
+                togglePassword.addEventListener("click", function(e) {
+                  // toggle the type attribute
+                  const type =
+                    password.getAttribute("type") === "password" ? "text" : "password";
+                  password.setAttribute("type", type);
+                  // toggle the eye slash icon
+                  this.classList.toggle("fa-eye-slash");
+                })
+              };
+            </script>
           </div>
 
           <!-- <div class="">
@@ -864,9 +906,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </div>
-
-  <script src="js/6709-main_js-login.js"></script>
-
-
 </body>
-</html>
+<script src="js/6709-main_js-login.js">

@@ -684,7 +684,7 @@
                      <div class="content">
     <div class="float-sm">
 <div class="fl-fl float-fb"><img src="writereaddata/files/center.png" style="padding:3% ;" /><a href="./market.php" target="_blank"> Show Markets</a></div>
-<div class="fl-fl float-tw"><img src="writereaddata/files/state1.png" style="padding:3% ;" /><a href="./account/login/index.html" target="_blank"> Pay Rent</a></div>
+<div class="fl-fl float-tw"><img src="writereaddata/files/state1.png" style="padding:3% ;" /><a href="./account/login/index.php" target="_blank"> Pay Rent</a></div>
 <div class="fl-fl float-gp"><img src="writereaddata/files/state2.png" style="padding:3% ;" /> <a href="./account/select/select.php" target="_blank"> Dashboard</a></div>
 </div>
 </div>

@@ -12,7 +12,7 @@
 			<!-- FORM Panel -->
 
 			<!-- Table Panel -->
-			<div class="col-md-12">
+			<div class="col-md-14">
 				<div class="card">
 					<div class="card-header">
 						<b>List of Tenant</b>
@@ -79,6 +79,8 @@
 											<p><b><?php echo  $last_payment ?></b></p>
 										</td>
 										<td>
+											<?php echo ucwords($row['house_no']) ?>
+										</td><td>
 											<?php echo ucwords($row['house_no']) ?>
 										</td>
 										<td class="text-center">
